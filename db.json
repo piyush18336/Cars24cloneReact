@@ -1,0 +1,153 @@
+{
+  "Cars": [
+    {
+      "carName": "Honda City 2022",
+      "image": "https://th.bing.com/th/id/OIP.xO-VP9BkWHXHXgvUXmZiggHaEG?pid=ImgDet&rs=1",
+      "price": 1180000,
+      "id": 6
+    },
+    {
+      "carName": "Maruti Suzuki Celerio",
+      "image": "https://th.bing.com/th/id/R.d0586968de8a43eee95a1a41e5966e12?rik=ioti2Vk%2bdocK1Q&riu=http%3a%2f%2fwww.pngimagesfree.com%2fCar%2fMaruti%2fCelerio+Car+png.png&ehk=FuAjI5ipREVLyIRS4%2bf9G0ES6WWDuCKrwc8qBjjhjsY%3d&risl=&pid=ImgRaw&r=0",
+      "price": 500000,
+      "model_year": "",
+      "owner": "2nd owner",
+      "fuel_type": "Petrol",
+      "km_driven": 50000,
+      "id": 7
+    },
+    {
+      "carName": "Maruti Suzuki Celerio",
+      "image": "https://th.bing.com/th/id/R.d0586968de8a43eee95a1a41e5966e12?rik=ioti2Vk%2bdocK1Q&riu=http%3a%2f%2fwww.pngimagesfree.com%2fCar%2fMaruti%2fCelerio+Car+png.png&ehk=FuAjI5ipREVLyIRS4%2bf9G0ES6WWDuCKrwc8qBjjhjsY%3d&risl=&pid=ImgRaw&r=0",
+      "price": 500000,
+      "model_year": 2018,
+      "owner": "1st owner",
+      "fuel_type": "Petrol",
+      "km_driven": 5969,
+      "brand-name": "Maruti",
+      "brand-model": "Celerio",
+      "type": "hatchback",
+      "id": 8
+    },
+    {
+      "carName": "Maruti Suzuki Wagon R",
+      "image": "https://th.bing.com/th/id/OIP.xO-VP9BkWHXHXgvUXmZiggHaEG?pid=ImgDet&rs=1",
+      "price": 300000,
+      "model_year": "2015",
+      "km_driven": "89000",
+      "brand_name": "Suzuki",
+      "brand_model": "WagonR",
+      "fuel_type": "petrol",
+      "owner": "1st person",
+      "id": 9
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 10
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 11
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 12
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 13
+    }
+  ],
+  "Brand": [
+    {
+      "brand_name": "Maruti",
+      "brand_model": [
+        {
+          "id": 1,
+          "name": "Celerio"
+        },
+        {
+          "id": 2,
+          "name": "Swift"
+        },
+        {
+          "id": 3,
+          "name": "WagonR"
+        },
+        {
+          "id": 4,
+          "name": "Alto"
+        },
+        {
+          "id": 5,
+          "name": "Ertiga"
+        },
+        {
+          "id": 6,
+          "name": "Baleno"
+        }
+      ]
+    }
+  ],
+  "Users": [
+    {
+      "Name": "Piyush ",
+      "Email": "piyush18336@gmail.com",
+      "Mobile": "9910890980",
+      "Password": "piyush@123",
+      "UserType": "Admin",
+      "confirmPass": "piyush@123",
+      "id": 1
+    },
+    {
+      "Name": "Naman",
+      "Email": "naman@gmail.com",
+      "Mobile": "999988881",
+      "Password": "naman@123",
+      "UserType": "Customer",
+      "confirmPass": "naman@123",
+      "id": 2
+    },
+    {
+      "Name": "Piyush",
+      "Email": "piyush@wittybrains.com",
+      "Mobile": "711465138",
+      "Password": "piyush@123",
+      "UserType": "Customer",
+      "confirmPass": "piyush@123",
+      "id": 3
+    }
+  ]
+}

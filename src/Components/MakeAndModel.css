@@ -1,0 +1,24 @@
+.make-model-search{
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.field-checkbox1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.fetch-model-data{
+    margin: 20px 200px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+    color: black;
+
+}

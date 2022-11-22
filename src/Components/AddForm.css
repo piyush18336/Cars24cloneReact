@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: black;
+}
+
+.password-error{
+    font-size: 12px;
+    color: red;
+}

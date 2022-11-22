@@ -1,0 +1,26 @@
+.rangeValues{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.min-price{
+width: 150px;
+height: 50px;
+padding: 0.25rem;
+margin: 10px;
+}
+.max-price{
+width: 150px;
+height: 50px;
+padding: 0.25rem;
+margin: 10px;
+}
+
+.seperator{
+width: 40px;
+height: 3px;
+background-color: black;
+}

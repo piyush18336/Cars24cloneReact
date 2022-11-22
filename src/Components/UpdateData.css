@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    margin: 100px auto;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+.add-button{
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   height: 50px;
+   justify-content: space-around;
+}
+
+.details{
+    display: grid;
+    grid-template-columns:  auto auto auto auto auto ;
+    justify-content: space-between;
+}
+
+.add-data{
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: brown;
+    text-align: end ;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: 200px 400px 300px 100px 100px;
+    gap: 20px 10px;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.modify-button{
+    padding: 8px 10px;
+    width: 70px;
+    height: 40px;
+    font-size: 11px ;
+    border: 1px solid white;
+    border-radius: 5px;
+    color:white
+}
+
+.modify-button:hover{
+    background-color: rgb(212, 75, 75);
+}
+
+.Confirmation{
+    position: absolute;  
+    left: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 150px;
+    width: 400px;
+    padding: 12px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.confirm-message{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.button-section{
+    display: grid;
+    justify-content: space-evenly;
+    margin: 20px;
+    grid-template-columns: auto auto;
+}
+
+.cancel{
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 5px;
+    background-color: rgb(32, 104, 238);
+    border-radius:  5px;
+}
+
+.cancel:hover{
+    background-color: rgb(24, 58, 211);  
+}
+
+.confirm{
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    outline: none;
+    color: white;
+    padding: 5px;
+    border: none;
+    background-color: rgb(245, 77, 77);
+    border-radius:  5px;
+}
+
+.confirm:hover{
+    background-color: rgb(248, 34, 34);
+}
+
+.listSearch{
+    width:  300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px;
+}
