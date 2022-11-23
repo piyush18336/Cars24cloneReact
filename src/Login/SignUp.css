@@ -4,12 +4,21 @@
    box-sizing: border-box;
 }
 
-.container{
-    padding: 10px 10px;
+.SignUpContainer{
+    margin-top: 10rem;
+    padding: 20px 20px;
+    width: 50%;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(37, 41, 40);
+}
+
+.SignUpform-container{
+    display: flex;
+    flex-direction: column;
 }
 
 .input-text{
-    width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -18,7 +27,6 @@
 }
 
 .input-pass{
-    width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -44,7 +52,7 @@
 }
 
 .input-button{
-    width: 500px;
+    
     padding: 12px 20px;
     margin: 8px 0;
     background-color: rgb(247, 97, 97);

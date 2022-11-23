@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './SignUp.css'
 import { useFormik } from 'formik';
 import { loginSchema } from '../Components/loginSchema';
 import { useState } from 'react';
@@ -8,6 +9,7 @@ import Home from '../Home/Home';
 import loginContext from '../Context/LoginContext';
 import { useContext } from 'react';
 import '../Components/UpdateProfile.css'
+
 const Login = ({setLocalUser}) => {
 
   const isLogin = useContext(loginContext);
@@ -106,9 +108,9 @@ const Login = ({setLocalUser}) => {
     <div>
       { user.Email && user.Password ? <Home />: <form className="registration-form" onSubmit={formik.handleSubmit}>
       
-      <div className="container">
-      <h1>Login</h1>
-        <div className="form-container">
+      <div className="SignUpContainer">
+        <div className="SignUpform-container">
+        <h1>Login</h1>
         <label className="input-label" htmlFor="email">
             Email
           </label>

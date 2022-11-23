@@ -124,8 +124,8 @@ export default function SignUp() {
   return (
     <form className="registration-form" onSubmit={formik.handleSubmit}>
      
-      <div className="container">
-        <div className="form-container">
+      <div className="SignUpContainer">
+        <div className="SignUpform-container">
         <h1>Sign Up</h1>
           <label className="input-label" htmlFor="name">
             Name

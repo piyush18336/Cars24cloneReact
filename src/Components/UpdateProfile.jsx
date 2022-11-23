@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useEffect,useRef} from "react";
 import { profileSchema } from "./ProfileSchema";
-import './UpdateProfile.css';
+import '../Login/SignUp.css'
 import { useNavigate } from "react-router-dom";
 import { Toast } from "primereact/toast";
 
@@ -85,8 +85,8 @@ const UpdateProfile = () => {
     <>
     <form className="registration-form" onSubmit={formik.handleSubmit}>
      
-     <div className="container">
-       <div className="form-container">
+     <div className="SignUpContainer">
+       <div className="SignUpform-container">
        <h1>Update User Profile</h1>
          <label className="input-label" htmlFor="name">
            Name
