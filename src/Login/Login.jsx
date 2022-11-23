@@ -1,5 +1,4 @@
 import React from 'react';
-import './Login.css';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { loginSchema } from '../Components/loginSchema';
@@ -8,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Home from '../Home/Home';
 import loginContext from '../Context/LoginContext';
 import { useContext } from 'react';
-
+import '../Components/UpdateProfile.css'
 const Login = ({setLocalUser}) => {
 
   const isLogin = useContext(loginContext);

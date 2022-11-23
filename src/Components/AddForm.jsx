@@ -43,7 +43,7 @@ const AddForm = () => {
     }
 
   return (
-    <div className='container'>
+    <div className='AddFormcontainer'>
         <form onSubmit={handleFormSubmit}>
   <div className="mb-3">
     <label  className="form-label">Enter Car Name</label>

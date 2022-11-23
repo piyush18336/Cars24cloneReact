@@ -51,12 +51,12 @@ export default function NavBar() {
             <div className='user'>Account <FiLogIn/>
                   <div className="user-content">
 
-                  {user.Email && user.Password ? <button className='Logout' onClick={()=>handleLogout()}>Logout</button>: <NavLink to="/Login">Login</NavLink> }  
-                  {user.Email && user.Password ?  <NavLink to="/UpdateProfile">Update Profile</NavLink>: <NavLink to="/SignUp">Sign Up</NavLink>
+                  {user.Email && user.Password? <button className='Logout' onClick={()=>handleLogout()}>Logout</button>: <NavLink to="/Login">Login</NavLink> }  
+                  {user.Email && user.Password?  <NavLink to="/UpdateProfile">Update Profile</NavLink>: <NavLink to="/SignUp">Sign Up</NavLink>
                   }
             </div> 
           </div>
-              { user.Email && user.Password  && (user.UserType=='Admin') ? <>  
+              { user  && (user.UserType=='Admin') ? <>  
               <li>
                   <NavLink className='update-data' to="/UpdateData">Update Data</NavLink>
               </li>

@@ -2,9 +2,9 @@ import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
-import { Button } from 'primereact/button';
-import { Toast } from 'primereact/toast';
+// import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
+// import { Button } from 'primereact/button';
+// import { Toast } from 'primereact/toast';
 
 const ConfirmationModal = ({id,setData,setShow}) => {
     // const[updatedData, setUpdatedData] = useState(data);
@@ -26,8 +26,6 @@ const ConfirmationModal = ({id,setData,setShow}) => {
           });
       };
 
-    const navigate = useNavigate();
-
     const deletePost = (id)=>{
         axios.delete(`http://localhost:3000/Cars/${id}`).then(res=>{
         //   alert("Data successfully deleted!! Refresh the page to get the updated Data");
@@ -45,7 +43,6 @@ const ConfirmationModal = ({id,setData,setShow}) => {
         </div>
     </div>:null}
     </>
-    
     
   )
 }

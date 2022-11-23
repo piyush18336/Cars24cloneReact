@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
-    background-color: black;
+.AddFormcontainer{
+    margin: 10rem;
+    color: white;
+    padding: 20px 30px;
+    background-color: rgb(71, 67, 67);
+    border-radius: 10px;
+    border: 2px solid black;
 }
 
 .password-error{

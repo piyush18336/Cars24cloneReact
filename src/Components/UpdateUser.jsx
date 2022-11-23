@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState ,useEffect, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
-import './UpdateData.css';
+import './UpdateUser.css';
 import axios from "axios";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
@@ -101,9 +101,11 @@ const showSuccess = () => {
     accept={accept}
     />
 
-      <div className='container'>
+     <div className='UpdateUserContainer'>
+     <div className='Searchcontainer'>
+     <input className='listSearch' name="search" placeholder='Search...' value={searchData} onChange={(e)=>{handleSearch(e)}}></input>
       <div className="add-button">
-        <input className='listSearch' name="search" placeholder='Search...' value={searchData} onChange={(e)=>{handleSearch(e)}}></input>
+        
           <button className="add-data btn btn-success" onClick={addForm}>
             Add User
           </button>
@@ -154,7 +156,9 @@ const showSuccess = () => {
       </tr>
     ))}
   </tbody>
-</table>
+      </table>
+
+     </div>
     </>
   )
 }

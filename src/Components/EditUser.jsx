@@ -18,8 +18,6 @@ const [searchParams] = useSearchParams();
 
 const UserId =  (searchParams.get('id'));
 
-
-
 const fetchData = (UserId) => {
   fetch(`http://localhost:3000/Users/${UserId}`)
     .then((response) => {

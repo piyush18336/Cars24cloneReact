@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'; 
-
+import { useNavigate } from 'react-router-dom';
 import CarItem from '../Components/CarItems';
 // import { useContext } from 'react'
 // import { AppContext } from '../context'
@@ -8,6 +8,9 @@ import CarItem from '../Components/CarItems';
 
 const Home = () => {
 
+const navigate = useNavigate();
+
+console.log(navigate);
   // const name = useContext(AppContext)
   // const name = useGlobalContext();
   return (
