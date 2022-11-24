@@ -43,13 +43,13 @@ const handleSearch = async (e)=>{
         })
 }
 
-const showSuccess = () => {
-    toast.current.show({
-      severity: "success",
-      summary: "Data Updated Successfully!!",
-      detail: "Data fetched successfully",     
-    });
-  };
+// const showSuccess = () => {
+//     toast.current.show({
+//       severity: "success",
+//       summary: "Data Updated Successfully!!",
+//       detail: "Data fetched successfully",     
+//     });
+//   };
 
   const confirm2 = (id) => {
     confirmDialog({
@@ -68,7 +68,7 @@ const showSuccess = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
     // showSuccess();
@@ -127,8 +127,8 @@ const showSuccess = () => {
   </thead>
   <tbody>
     
-    {data.map((user)=>(
-      <tr>
+    {data.map((user,index)=>(
+      <tr key={index}>
         <th scope="row">{user.id}</th>
         <td>{user.Name}</td>
         <td>{user.Email}</td>

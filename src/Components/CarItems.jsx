@@ -11,8 +11,6 @@ import RangeValues from './RangeValues';
 import YearSlider from './YearSlider';
 import YearValues from './YearValues';
 
-
-
 const CarItem = ()=>{
    
     const [Cars,setValues] = useState([]);
@@ -67,15 +65,16 @@ const CarItem = ()=>{
 //***************FILTER USING MODEL YEAR********************** */
 
 const modelyear = modelYearRange.filter((element)=>{
-        if(element.model_year>=minYear && element.model_year<=maxYear){
-            return element;
+        if(element.model_year>=minYear && element.model_year<=maxYear) {
+
+            return element; 
         }
+        return null;
 })
 
 useEffect(()=>{
     setValues(modelyear);
 },[minYear,maxYear]);
-
 
 //***************FILTER USING MODEL YEAR********************** */
 
@@ -85,13 +84,14 @@ useEffect(()=>{
             setValues(actual);
         }
 
-
  //**************************** */
  //setting price range filter       
           const price = priceRange.filter((element)=>{
                 if(element.price>=minValue && element.price<=maxValue){
                     return element;
-                }   
+                } 
+                
+                return null;
             })
 
         useEffect(()=>{
@@ -106,15 +106,16 @@ useEffect(()=>{
         .then((response)=>{
             return response.json();
         }).then((data)=>{
-            // console.log(data);
+            console.log(data);
             setValues(data);
             setActualValue(data);
             setPriceRange(data);  
             setModelYearRange(data);  
         })
     }
-
+    console.log("fetching data");
     useEffect(()=>{
+       
         fetchData();
     },[])
 /* ************************************* */

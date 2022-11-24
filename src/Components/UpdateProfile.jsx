@@ -4,23 +4,13 @@ import React, { useState } from "react";
 import { useEffect,useRef} from "react";
 import { profileSchema } from "./ProfileSchema";
 import '../Login/SignUp.css'
-import { useNavigate } from "react-router-dom";
 import { Toast } from "primereact/toast";
 
 
 const UpdateProfile = () => {
  
-  const navigate = useNavigate();
   const [formData , setformData] =  useState({});
   const toast = useRef(null);
-
-//   const formInitialValues = {
-//     Name:'',
-//     Email:'', 
-//     Mobile:'',
-//     Password: '',
-//     confirmPass:'',
-//   }
 
   const data = JSON.parse(localStorage.getItem('user'));
   const userid = data[0].id;
@@ -120,7 +110,7 @@ const UpdateProfile = () => {
            value={formik.values.Email}
            onChange={formik.handleChange}
          />
-       {formik.errors.Email && formik.touched.Email && (formik.values.Email!='')?(<span className="form-error">{formik.errors.Email}</span>):null}
+       {formik.errors.Email && formik.touched.Email && (formik.values.Email!=='')?(<span className="form-error">{formik.errors.Email}</span>):null}
  
  
          <label className="input-label" htmlFor="mobile">

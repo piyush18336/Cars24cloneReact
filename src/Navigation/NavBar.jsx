@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import logo from '../Images/CARS24_Official_New_Logo.png'
 import './NavBar.css'
 import { FiLogIn } from "react-icons/fi";
@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import loginContext from '../Context/LoginContext';
+
 
 export default function NavBar() {
 
@@ -28,22 +28,12 @@ export default function NavBar() {
     }
   },[userkey])
 
-  const isLoggedIn = useContext(loginContext);
-
 
   return (
     <div className='container-fluid'>
         <nav className='navbar'>
           <ul className='navItems'>
            <li><img className='logo' src={logo} alt="logo"/></li> 
-            {/* <li className='dropdown'>
-               <span className='dropbtn'>Location  <FcExpand /></span>
-                <div className="dropdown-content">
-                    <a href="#">New Delhi</a>
-                    <a href="#">Jaipur</a>
-                    <a href="#">Lucknow</a>
-                </div>
-            </li> */}
             <li >
                 <NavLink className='home' to="/">Home</NavLink>
             </li>
@@ -56,7 +46,7 @@ export default function NavBar() {
                   }
             </div> 
           </div>
-              { user  && (user.UserType=='Admin') ? <>  
+              { user  && (user.UserType === 'Admin') ? <>  
               <li>
                   <NavLink className='update-data' to="/UpdateData">Update Data</NavLink>
               </li>
@@ -65,12 +55,6 @@ export default function NavBar() {
               </li> 
               </> : null}
 
-              {/* <li>
-                  <NavLink className='update-data' to="/UpdateData">Update Data</NavLink>
-              </li>
-              <li>
-                  <NavLink className='update-data' to="/UpdateUser">Update User</NavLink>
-              </li>  */}
             {user.Email && user.Password  ? <span className='user-detail'>{user.Name}</span> : null } 
             
           </ul>       

@@ -42,13 +42,13 @@ const UpdateData = () => {
     })
 }
 
-  const showSuccess = () => {
-    toast.current.show({
-      severity: "success",
-      summary: "Data Updated Successfully!!",
-      detail: "Data fetched successfully",     
-    });
-  };
+  // const showSuccess = () => {
+  //   toast.current.show({
+  //     severity: "success",
+  //     summary: "Data Updated Successfully!!",
+  //     detail: "Data fetched successfully",     
+  //   });
+  // };
 
   const confirm2 = (id) => {
     confirmDialog({
@@ -67,10 +67,10 @@ const UpdateData = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
-    showSuccess();
+    // showSuccess();
   };
 
   useEffect(() => {
@@ -133,7 +133,7 @@ const UpdateData = () => {
         </thead>
         <tbody>
         {data.map((car,index)=>(
-          <tr >
+          <tr key={index}>
           <th scope="row">{car.id}</th>
           <td>{car.carName}</td>
           <td>{car.price}</td>

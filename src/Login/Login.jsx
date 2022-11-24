@@ -12,8 +12,6 @@ import '../Components/UpdateProfile.css'
 
 const Login = ({setLocalUser}) => {
 
-  const isLogin = useContext(loginContext);
-
   const formInitialValues = {
     Email:'',
     Password: '',
@@ -24,8 +22,6 @@ const Login = ({setLocalUser}) => {
   var Email = '';
   var Password = '';
   const navigate = useNavigate();
-  // const getEmail = localStorage.getItem("emailKey");
-  // const getPassword = localStorage.getItem("passwordKey");
   
   const formik= useFormik({
     initialValues : formInitialValues,
@@ -37,11 +33,11 @@ const Login = ({setLocalUser}) => {
        Email = response.data[0].Email;
        Password = response.data[0].Password;
        console.log("Email :"+Email+  " Pass : "+Password)  
-
-       if(setLocalUser(localStorage.setItem('user',JSON.stringify(response.data)))){
-         isLogin.login = true;
+       
+       if(localStorage.setItem('user',JSON.stringify(response.data))){
+        setLocalUser(true);
        }
-     
+
         if(Email === formik.values.Email && Password === formik.values.Password){
           setError('');
           navigate(`/`);  

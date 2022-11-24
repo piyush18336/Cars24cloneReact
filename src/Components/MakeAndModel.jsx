@@ -7,11 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const MakeAndModel = () => {
   const [searchData, setSearchData] = useState([]);
-  const [checkedAll, setCheckedAll] = useState(false);
   const [checked, setChecked] = useState(false);
   const [modelCheck, setModelCheck] = useState(false);
   const [brand, setBrand] = useState([]);
-  const [brandModel,setBrandModel] = useState([]);
+
   
 
   const handleBrandCheck = (e) => {  
