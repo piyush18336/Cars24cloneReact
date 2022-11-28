@@ -253,3 +253,13 @@
   text-align: center;
   background-color: rgb(121, 206, 218);
 }
+
+/* ***********PAGINATION************** */
+.pagination{
+  display: flex;
+  justify-content: center;
+  background-color: #b6b3b3;
+  margin: 3rem;
+  padding: 10px 10px;
+  border-radius: 5px;
+}

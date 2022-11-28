@@ -38,7 +38,7 @@ export default function NavBar() {
                 <NavLink className='home' to="/">Home</NavLink>
             </li>
 
-            <div className='user'>Account <FiLogIn/>
+            <div className='user'> Account<FiLogIn/>
                   <div className="user-content">
 
                   {user.Email && user.Password? <button className='Logout' onClick={()=>handleLogout()}>Logout</button>: <NavLink to="/Login">Login</NavLink> }  

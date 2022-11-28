@@ -9,8 +9,15 @@ import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
 import { Toast } from "primereact/toast";
+import {Pagination} from 'antd';
+
 
 const UpdateData = () => {
+
+  const [total,setTotal] = useState(0);
+  const [page,setPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(5);
+
   const [data, setData] = useState([]);
   const [visible, setVisible] = useState(false);
   const [searchData , setSearchData] = useState([]);
@@ -22,6 +29,7 @@ const UpdateData = () => {
       .then((res) => {
         //   alert("Data successfully deleted!! Refresh the page to get the updated Data");
         fetchData();
+      
         console.log(`Data deleted of ID:${id}`);
       })
       .catch((err) => console.log(err));   
@@ -42,14 +50,6 @@ const UpdateData = () => {
     })
 }
 
-  // const showSuccess = () => {
-  //   toast.current.show({
-  //     severity: "success",
-  //     summary: "Data Updated Successfully!!",
-  //     detail: "Data fetched successfully",     
-  //   });
-  // };
-
   const confirm2 = (id) => {
     confirmDialog({
       message: "Do you want to delete this record?",
@@ -68,6 +68,7 @@ const UpdateData = () => {
       })
       .then((data) => {
         // console.log(data);
+        setTotal(data.length);
         setData(data);
       });
     // showSuccess();
@@ -90,6 +91,38 @@ const UpdateData = () => {
   //   setId(id);
   //   setPopUp(!popUp);
   // }
+
+
+  // *******************PAGINATION*****************************
+
+
+  const indexOfLastPage = page * postPerPage;
+  const indexOfFirstPage = indexOfLastPage - postPerPage;
+  const currentPosts = data.slice(indexOfFirstPage,indexOfLastPage);
+
+  console.log("indexOfFirstPage",indexOfFirstPage)
+  console.log("indexOfLastPage",indexOfLastPage)
+  console.log("currentPosts",currentPosts);
+  console.log("page",page);
+
+  const onShowSizeChange = (current,pageSize)=>{
+      console.log("page size",pageSize)
+   setPostPerPage(pageSize);
+  }
+
+
+
+  const itemRender = (current,type,originalElement)=>{
+      if(type==="prev"){
+          return<a>Previous</a>
+      }
+      if(type === "next"){
+          return <a>Next</a>
+      }
+
+      return originalElement;
+  }
+  // ****************************************************
 
   return (
     <>
@@ -132,7 +165,7 @@ const UpdateData = () => {
         </tr>
         </thead>
         <tbody>
-        {data.map((car,index)=>(
+        {currentPosts.map((car,index)=>(
           <tr key={index}>
           <th scope="row">{car.id}</th>
           <td>{car.carName}</td>
@@ -166,6 +199,19 @@ const UpdateData = () => {
         
         </tbody>
             </table>
+
+            <div className='pagination'>
+                <Pagination
+                pageSize={postPerPage}
+                total={total}
+                current={page}
+                onChange={(value)=>{setPage(value)}}
+                showSizeChanger
+                showQuickJumper
+                onShowSizeChange={onShowSizeChange}
+                itemRender={itemRender}
+                />
+            </div>
        </div>
       
 

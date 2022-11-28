@@ -10,7 +10,6 @@ import { Toast } from "primereact/toast";
 const UpdateProfile = () => {
  
   const [formData , setformData] =  useState({});
-  const toast = useRef(null);
 
   const data = JSON.parse(localStorage.getItem('user'));
   const userid = data[0].id;
@@ -27,18 +26,13 @@ const UpdateProfile = () => {
      
   };
 
-  console.log("form data",formData);
+  // console.log("form data",formData);
     
   useEffect(()=>{
     fetchData(userid);
   },[])
       
-  const showSuccess = () => {
-    toast.current.show({
-      severity: "success",
-      summary: "Profile Updated Successfully!!",  
-    });
-  };
+
 
   const updateProfile = (values,id)=>{
     axios.put(`http://localhost:3000/Users/${id}`,values).then(function(response){
@@ -46,7 +40,7 @@ const UpdateProfile = () => {
             console.log(error);
             // alert('Uh! Oh! Some error occured')
           });
-          showSuccess(); 
+ 
           fetchData();   
   }
 
@@ -169,7 +163,6 @@ const UpdateProfile = () => {
        </div>
  
     </form>
-    <Toast ref={toast} position="bottom-left" />
     </>
   );
 };

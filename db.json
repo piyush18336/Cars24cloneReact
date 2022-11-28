@@ -4,7 +4,7 @@
       "carName": "Honda City 2022",
       "image": "https://th.bing.com/th/id/OIP.xO-VP9BkWHXHXgvUXmZiggHaEG?pid=ImgDet&rs=1",
       "price": 1180000,
-      "id": 6
+      "id": 1
     },
     {
       "carName": "Maruti Suzuki Celerio",
@@ -14,7 +14,7 @@
       "owner": "2nd owner",
       "fuel_type": "Petrol",
       "km_driven": 50000,
-      "id": 7
+      "id": 2
     },
     {
       "carName": "Maruti Suzuki Celerio",
@@ -27,7 +27,7 @@
       "brand-name": "Maruti",
       "brand-model": "Celerio",
       "type": "hatchback",
-      "id": 8
+      "id": 3
     },
     {
       "carName": "Maruti Suzuki Wagon R",
@@ -39,6 +39,66 @@
       "brand_model": "WagonR",
       "fuel_type": "petrol",
       "owner": "1st person",
+      "id": 4
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 5
+    },
+    {
+      "carName": "Audi x4",
+      "image": "https://purepng.com/public/uploads/large/purepng.com-yellow-audi-caraudicars-961524670899johme.png",
+      "price": 7500000,
+      "model_year": "2019",
+      "km_driven": "50000",
+      "brand_name": "Audi",
+      "brand_model": "Audi x4",
+      "fuel_type": "petrol",
+      "owner": "1nd Owner",
+      "id": 6
+    },
+    {
+      "carName": "Wolkswagen a4",
+      "image": "https://th.bing.com/th/id/R.8b01377204f7e5e60f3928fa9c6d8d8d?rik=veNTNapnhdPf5A&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-hd-images-of-cars-volkswagen-png-hd-1500.png&ehk=bzMQ1ueAXMsJzhilqNehN77R9uwSPUm8hoyg%2bCU3wYo%3d&risl=&pid=ImgRaw&r=0",
+      "price": 876000,
+      "model_year": "2021",
+      "km_driven": "100000",
+      "brand_name": "Wolkswagen",
+      "brand_model": "Wolkswagen a4",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 7
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 8
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
       "id": 9
     },
     {
@@ -88,6 +148,162 @@
       "fuel_type": "petrol",
       "owner": "2nd Owner",
       "id": 13
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 14
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 15
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 16
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 17
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 18
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 19
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 20
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 21
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 22
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 23
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 24
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 25
+    },
+    {
+      "carName": "Baleno",
+      "image": "https://th.bing.com/th/id/OIP.Mooc29jH-Nd1O0uwnZ4SKQHaE7?pid=ImgDet&rs=1",
+      "price": 750000,
+      "model_year": "2021",
+      "km_driven": "50000",
+      "brand_name": "Suzuki",
+      "brand_model": "Baleno VXI",
+      "fuel_type": "petrol",
+      "owner": "2nd Owner",
+      "id": 26
     }
   ],
   "Brand": [
@@ -148,6 +364,33 @@
       "UserType": "Customer",
       "confirmPass": "piyush@123",
       "id": 3
+    },
+    {
+      "Name": "girish",
+      "Email": "girish@gmail.com",
+      "Mobile": "723298892",
+      "Password": "girish@123",
+      "UserType": "Customer",
+      "confirmPass": "girish@123",
+      "id": 4
+    },
+    {
+      "Name": "naveen",
+      "Email": "naveen@gmail.com",
+      "Mobile": "893289328",
+      "Password": "naveen@123",
+      "UserType": "Admin",
+      "confirmPass": "naveen@123",
+      "id": 5
+    },
+    {
+      "Name": "puru",
+      "Email": "puru@gmail.com",
+      "Mobile": "2389823239",
+      "Password": "puru@123",
+      "UserType": "Customer",
+      "confirmPass": "puru@123",
+      "id": 6
     }
   ]
 }

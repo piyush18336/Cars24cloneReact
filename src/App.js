@@ -4,10 +4,10 @@ import React from 'react'
 import Home from './Home/Home';
 import Login from './Login/Login';
 import SignUp from './Login/SignUp';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, useState } from 'react';
 import { useEffect } from 'react';
 import PageNotFound from './Components/PageNotFound';
+import {BrowserRouter , Route , Routes} from 'react-router-dom'
 
 
 const UpdateProfile = React.lazy(() => import('./Components/UpdateProfile'));
@@ -17,6 +17,11 @@ const AddForm = React.lazy(() => import('./Components/AddForm'));
 const AddUser = React.lazy(() => import('./Components/AddUser'));
 const EditUser = React.lazy(() => import('./Components/EditUser'));
 const Modify = React.lazy(() => import('./Components/Modify'));
+
+
+// const Admin = React.lazy(() =>import('./Users/Admin'));
+// const Customer = React.lazy(() =>import('./Users/Customer'));
+
 
 
 const App = () => {
@@ -32,16 +37,14 @@ const App = () => {
   }, [localUser]);
 
   // console.log(user);
-  // console.log("local User",localUser);
+  console.log("local User",localUser);
   return (
     <>
       <BrowserRouter>
         <NavBar />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className='container'>Loading...</div>}>
           <Routes>
             <Route path='/' element={<Home />} />
-
-
             <Route path='/Login' element={<Login setLocalUser={setLocalUser} />} />
             <Route path='/SignUp' element={<SignUp />} />
 
@@ -57,6 +60,10 @@ const App = () => {
               <Route path='/EditUser' element={<EditUser/>} />
               <Route path='/Modify' element={<Modify/>} />
             </>}
+
+            {/* {user.UserType === 'Customer' && <Customer/>}
+
+            { user.UserType === 'Admin' && <Admin/>} */}
 
             <Route path='*' element={<PageNotFound />} />
 

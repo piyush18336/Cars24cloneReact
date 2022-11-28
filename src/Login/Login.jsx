@@ -6,8 +6,7 @@ import { loginSchema } from '../Components/loginSchema';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Home from '../Home/Home';
-import loginContext from '../Context/LoginContext';
-import { useContext } from 'react';
+
 import '../Components/UpdateProfile.css'
 
 const Login = ({setLocalUser}) => {
@@ -30,13 +29,15 @@ const Login = ({setLocalUser}) => {
       
        axios.get(`http://localhost:3000/Users?Email=${values.Email}&Password=${values.Password}`)
     .then((response)=>{
+
+      if(response.data){
+        setLocalUser(true);
+       }
+
        Email = response.data[0].Email;
        Password = response.data[0].Password;
        console.log("Email :"+Email+  " Pass : "+Password)  
-       
-       if(localStorage.setItem('user',JSON.stringify(response.data))){
-        setLocalUser(true);
-       }
+       localStorage.setItem('user',JSON.stringify(response.data))
 
         if(Email === formik.values.Email && Password === formik.values.Password){
           setError('');

@@ -27,3 +27,12 @@ body{
     height: 40px;
     padding: 5px 5px;
 }
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    background-color: #b6b3b3;
+    margin: 3rem;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }

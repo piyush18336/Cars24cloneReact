@@ -10,10 +10,21 @@ import RangeSlider from './RangeSlider';
 import RangeValues from './RangeValues';
 import YearSlider from './YearSlider';
 import YearValues from './YearValues';
+// import pagination from './pagination';
+import {Pagination} from 'antd';
+// import {MDBPagination , MDBPaginationItem , MDBPaginationLink , MDBBtn} from 'mdb-react-ui-kit'
+
 
 const CarItem = ()=>{
    
     const [Cars,setValues] = useState([]);
+    const [total,setTotal] = useState(0);
+    const [page,setPage] = useState(1);
+    const [postPerPage, setPostPerPage] = useState(5);
+    // const [currentPage ,setCurrentPage] = useState(1);
+    // const [pagelimit] = useState(4);
+
+
     const [actual, setActualValue] = useState([]);
     const [priceRange, setPriceRange] = useState([]);
     const [modelYearRange, setModelYearRange] = useState([]);
@@ -35,6 +46,7 @@ const CarItem = ()=>{
     const [maxKm,setMaxKm] = useState(150000);
 
 
+    
     //************DATA SEARCH***************** */
     const handleSearch = async (e)=>{
         e.preventDefault();
@@ -102,22 +114,56 @@ useEffect(()=>{
 
 /* **************FETCHING DATA*********************** */
     const fetchData = () =>{
-        fetch("http://localhost:3000/Cars")
+        fetch(`http://localhost:3000/Cars`)
         .then((response)=>{
             return response.json();
+        
         }).then((data)=>{
-            console.log(data);
+
             setValues(data);
+            setTotal(data.length);
             setActualValue(data);
             setPriceRange(data);  
             setModelYearRange(data);  
         })
     }
-    console.log("fetching data");
-    useEffect(()=>{
-       
+    useEffect(()=>{  
         fetchData();
     },[])
+
+    // *******************PAGINATION*****************************
+
+
+    const indexOfLastPage = page * postPerPage;
+    const indexOfFirstPage = indexOfLastPage - postPerPage;
+    const currentPosts = Cars.slice(indexOfFirstPage,indexOfLastPage);
+
+    // console.log("indexOfFirstPage",indexOfFirstPage)
+    // console.log("indexOfLastPage",indexOfLastPage)
+    // console.log("currentPosts",currentPosts);
+    // console.log("page",page);
+
+    const onShowSizeChange = (current,pageSize)=>{
+        // console.log("page size",pageSize)
+     setPostPerPage(pageSize);
+    }
+
+
+
+    const itemRender = (current,type,originalElement)=>{
+        if(type=="prev"){
+            return<a>Previous</a>
+        }
+        if(type == "next"){
+            return <a>Next</a>
+        }
+
+        return originalElement;
+    }
+    // ****************************************************
+
+ console.log(total);
+
 /* ************************************* */
     return (
         <>   
@@ -256,14 +302,14 @@ useEffect(()=>{
         </div>   
 
     <div className='block-2'>
-        {Cars.map((car,index)=>(
+        {currentPosts.map((car,index)=>(
             <div className='cars-card' key={index}>  
             <div className="card" style={{width: "20rem"}}>
 
             <img src={car.image} className="card-img-top" alt="..." style={{height: "20rem"}}/>
             <div className="card-body"> 
                <p>{car.model_year}</p> <h5 className="card-title">{car.carName}</h5>
-               
+               <p>{car.id}</p>
             <div className='more-info'>
                <div className='small-buttons'>
                     {car.km_driven} Km
@@ -283,7 +329,24 @@ useEffect(()=>{
           </div>    
         ))}
     </div>
+            <div className='pagination'>
+                <Pagination
+                pageSize={postPerPage}
+                total={total}
+                current={page}
+                onChange={(value)=>{setPage(value)}}
+                showSizeChanger
+                showQuickJumper
+                onShowSizeChange={onShowSizeChange}
+                itemRender={itemRender}
+                />
+            </div>
 
+
+            {/* <div style={{margin:"auto", padding: "15px",maxWidth: "400px" , alignContent:"center" }}>
+                {renderPagination()}
+            </div> */}
+           
         </div>   
         </>         
     )

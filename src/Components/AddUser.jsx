@@ -23,7 +23,7 @@ const AddUser = () => {
       console.log(values);
       axios.post("http://localhost:3000/Users",values).then(function (response) {
                 console.log(response);
-                navigate('/Login');
+                navigate('/UpdateUser');
                 // alert('Data Submitted Sucessfully')
               })
               .catch(function (error) {
