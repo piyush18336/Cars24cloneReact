@@ -366,15 +366,6 @@
       "id": 3
     },
     {
-      "Name": "girish",
-      "Email": "girish@gmail.com",
-      "Mobile": "723298892",
-      "Password": "girish@123",
-      "UserType": "Customer",
-      "confirmPass": "girish@123",
-      "id": 4
-    },
-    {
       "Name": "naveen",
       "Email": "naveen@gmail.com",
       "Mobile": "893289328",

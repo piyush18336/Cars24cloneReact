@@ -2,13 +2,13 @@ import React from 'react';
 import logo from '../Images/CARS24_Official_New_Logo.png'
 import './NavBar.css'
 import { FiLogIn } from "react-icons/fi";
-import { NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function NavBar() {
+export default function NavBar({setLocalUser,User,setLoggedInUser}) {
 
   const[user, setUser] = useState({})
 
@@ -18,6 +18,8 @@ export default function NavBar() {
   const handleLogout = ()=>{
    userkey =  localStorage.clear();
    setUser(''); 
+   setLocalUser(false);
+   setLoggedInUser('');
    navigate('/Login');
   }
   let data = {};
@@ -28,6 +30,7 @@ export default function NavBar() {
     }
   },[userkey])
 
+  console.log(User)
 
   return (
     <div className='container-fluid'>
@@ -42,20 +45,20 @@ export default function NavBar() {
                   <div className="user-content">
 
                   {user.Email && user.Password? <button className='Logout' onClick={()=>handleLogout()}>Logout</button>: <NavLink to="/Login">Login</NavLink> }  
-                  {user.Email && user.Password?  <NavLink to="/UpdateProfile">Update Profile</NavLink>: <NavLink to="/SignUp">Sign Up</NavLink>
+                  {user.Email && user.Password?  <NavLink to={`/${User}/UpdateProfile`}>Update Profile</NavLink>: <NavLink to="/SignUp">Sign Up</NavLink>
                   }
             </div> 
           </div>
               { user  && (user.UserType === 'Admin') ? <>  
               <li>
-                  <NavLink className='update-data' to="/UpdateData">Update Data</NavLink>
+                  <NavLink className='update-data' to="/admin/UpdateData">Update Data</NavLink>
               </li>
               <li>
-                  <NavLink className='update-data' to="/UpdateUser">Update User</NavLink>
+                  <NavLink className='update-data' to={'/admin/UpdateUser'}>Update User</NavLink>
               </li> 
               </> : null}
 
-            {user.Email && user.Password  ? <span className='user-detail'>{user.Name}</span> : null } 
+            {user.Email && user.Password ? <span className='user-detail'>{user.Name}</span> : null } 
             
           </ul>       
         </nav>

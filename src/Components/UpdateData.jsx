@@ -80,11 +80,11 @@ const UpdateData = () => {
 
   const navigate = useNavigate();
   const addForm = () => {
-    navigate("/AddForm");
+    navigate("/admin/AddForm");
   };
 
   const modify = (id) => {
-    navigate(`/Modify?id=${id}`);
+    navigate(`/admin/Modify?id=${id}`);
   };
 
   // const handleDelete = (id)=>{

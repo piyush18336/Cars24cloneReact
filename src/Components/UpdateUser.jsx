@@ -86,11 +86,11 @@ const handleSearch = async (e)=>{
 
   const navigate = useNavigate();
   const addForm = () => {
-    navigate("/AddUser");
+    navigate("/admin/AddUser");
   };
 
   const modify = (id) => {
-    navigate(`/EditUser?id=${id}`);
+    navigate(`/admin/EditUser?id=${id}`);
   };
 
    // *******************PAGINATION*****************************

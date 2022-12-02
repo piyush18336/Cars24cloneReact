@@ -1,18 +1,15 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
- import UpdateProfile from '../Components/UpdateProfile';
-
+import {Link, Outlet } from "react-router-dom";
+import UpdateProfile from '../Components/UpdateProfile';
+import PageNotFound from '../Components/PageNotFound';
 
 const Customer = () => {
 
   return (
-
-    <Routes>
-      {/* <Route path='/UpdateProfile' element={<ProtectedRoute Component={UpdateProfile}/>}/> */}
-
-       <Route path="/UpdateProfile" element={<UpdateProfile/>} />
-
-    </Routes>
+    <>
+    <Link to="UpdateProfile"></Link>
+    <Outlet/>
+    </>
   );
 };
 export default Customer;
