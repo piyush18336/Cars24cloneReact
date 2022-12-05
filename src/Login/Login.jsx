@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './SignUp.css'
 import { useFormik } from 'formik';
-import { loginSchema } from '../Components/loginSchema';
+import { loginSchema } from '../Components/Schema/loginSchema';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Home from '../Home/Home';

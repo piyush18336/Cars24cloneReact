@@ -3,22 +3,25 @@ import "./SignUp.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
-import { FormSchema } from "../Components/Schema";
+import { SignUpSchema } from "../Components/Schema/SignUpSchema";
+import { useState } from "react";
 
 
 export default function SignUp() {
+
 
   const formInitialValues = {
     Name:'',
     Email:'', 
     Mobile:'',
+    Image:'',
     Password: '',
     confirmPass:'',
   }
 
   const formik= useFormik({
     initialValues: formInitialValues,
-    validationSchema : FormSchema,
+    validationSchema : SignUpSchema,
     onSubmit: (values) =>{
       console.log(values);
       axios.post("http://localhost:3000/Users",values).then(function (response) {
@@ -33,7 +36,7 @@ export default function SignUp() {
     },
     
   })
-
+    console.log(formik.initialValues);
   // const[formData, setformData] = useState({
   //   Name : "", 
   //   Email: "",
@@ -186,6 +189,17 @@ export default function SignUp() {
             value={formik.values.Password}
             onChange={formik.handleChange}
           />
+
+          <label className="input-label" htmlFor="image">
+            Image
+          </label>
+          <input
+            type='file'
+            name = 'Image'
+            id = 'Image'
+            onChange={formik.handleChange}
+          />
+
         <span className="form-error">{formik.errors.Password}</span>
           <label className="input-label" htmlFor="confirmPass">
             Confirm Password

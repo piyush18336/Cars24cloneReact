@@ -82,12 +82,11 @@ ul{
     color: white;
 }
 
-.user{ 
-  margin: 0;    
+.user{   
   position: absolute;
   cursor: pointer;
   right: 0;
-  margin-right: 100px;
+  margin-right: 10rem;
   align-items: center;
 }
 
@@ -161,7 +160,7 @@ ul{
     padding:7px;
    
     right: 0;
-    margin-right: 10px;
+    margin-right: 4rem;
     color: black;
 }
 
@@ -173,5 +172,17 @@ nav li a.active{
 .user a.active{
     text-decoration: none;
     font-weight: bold;
+}
+
+.image-card{
+   position: absolute;
+   background-color: rgb(218, 155, 155);
+   height: 3rem;
+   width: 3rem;
+   border-radius: 50%;
+   right: 0;
+   justify-items: center;
+   margin-right: 1rem;
+   cursor: pointer;
 }
 

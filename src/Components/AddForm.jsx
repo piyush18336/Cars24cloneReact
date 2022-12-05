@@ -26,7 +26,7 @@ const AddForm = () => {
       
       setFormData((prev)=>{
         return{...prev,[name]:value}
-    })
+    })  
 }
 
     const handleFormSubmit = async(event)=>{

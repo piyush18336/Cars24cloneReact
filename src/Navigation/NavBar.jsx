@@ -30,7 +30,7 @@ export default function NavBar({setLocalUser,User,setLoggedInUser}) {
     }
   },[userkey])
 
-  console.log(User)
+  
 
   return (
     <div className='container-fluid'>
@@ -54,12 +54,16 @@ export default function NavBar({setLocalUser,User,setLoggedInUser}) {
                   <NavLink className='update-data' to="/admin/UpdateData">Update Data</NavLink>
               </li>
               <li>
-                  <NavLink className='update-data' to={'/admin/UpdateUser'}>Update User</NavLink>
+                  <NavLink className='update-data' to='/admin/UpdateUser'>Update User</NavLink>
               </li> 
               </> : null}
 
             {user.Email && user.Password ? <span className='user-detail'>{user.Name}</span> : null } 
             
+           { user.Email && user.Password ?<div className='image-card'>
+               { user.Image}
+              </div> : null }
+
           </ul>       
         </nav>
     </div>

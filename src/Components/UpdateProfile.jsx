@@ -2,7 +2,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import { useEffect,useRef} from "react";
-import { profileSchema } from "./ProfileSchema";
+import { profileSchema } from "./Schema/ProfileSchema";
 import '../Login/SignUp.css'
 import { Toast } from "primereact/toast";
 

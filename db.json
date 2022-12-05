@@ -382,6 +382,25 @@
       "UserType": "Customer",
       "confirmPass": "puru@123",
       "id": 6
+    },
+    {
+      "Name": "abc",
+      "Email": "abc@gmail.com",
+      "Mobile": "9918038293",
+      "Image": "",
+      "Password": "abc@12345",
+      "confirmPass": "abc@12345",
+      "id": 7
+    },
+    {
+      "Name": "parveen",
+      "Email": "parveen@gmail.com",
+      "Mobile": "8823732729",
+      "Image": "C:\\fakepath\\Image.jpg",
+      "Password": "parveen@123",
+      "confirmPass": "parveen@123",
+      "id": 8,
+      "UserType": "Customer"
     }
   ]
 }

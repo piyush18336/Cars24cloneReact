@@ -156,6 +156,7 @@ const handleSearch = async (e)=>{
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Mobile</th>
+      <th scope="col">User Image</th>
       <th scope="col">User Type</th>
       <th scope="col">Password</th>
       <th scope="col">Delete</th>
@@ -170,6 +171,7 @@ const handleSearch = async (e)=>{
         <td>{user.Name}</td>
         <td>{user.Email}</td>
         <td>{user.Mobile}</td>
+        <td>{user.Image}</td>
         <td>{user.UserType}</td>
         <td>{user.Password}</td>
         <td><button

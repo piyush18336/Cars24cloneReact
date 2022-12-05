@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-export const FormSchema = Yup.object({
+export const SignUpSchema = Yup.object({
     Name:Yup.string().min(3).max(20).required('User name is required'),
     Email:Yup.string().required('Email is required'),
     Mobile:Yup.number().required().positive().integer(),

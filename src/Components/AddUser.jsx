@@ -3,7 +3,7 @@ import axios from 'axios';
 import './AddForm.css'
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
-import { FormSchema } from "../Components/Schema";
+import { SignUpSchema } from "./Schema/SignUpSchema";
 
 const AddUser = () => {
 
@@ -18,7 +18,7 @@ const AddUser = () => {
 
   const formik= useFormik({
     initialValues: formInitialValues,
-    validationSchema : FormSchema,
+    validationSchema : SignUpSchema,
     onSubmit: (values) =>{
       console.log(values);
       axios.post("http://localhost:3000/Users",values).then(function (response) {
